@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 source /opt/selenium/functions.sh
 
@@ -10,7 +10,7 @@ rm -f /tmp/.X*lock
 echo
 echo "--- Restart dbus"
 echo
-sudo /etc/init.d/dbus restart
+# sudo /etc/init.d/dbus restart
 
 export GEOMETRY="$SCREEN_WIDTH""x""$SCREEN_HEIGHT""x""$SCREEN_DEPTH"
 export SERVERNUM=$(get_server_num)
@@ -24,7 +24,10 @@ echo "using display: "$SERVERNUM
 echo
 echo "--- Starting Starting Selenium Server"
 echo
-java -Dwebdriver.chrome.driver=/opt/selenium/chromedriver -jar /opt/selenium/selenium-server-standalone.jar -browserSideLog -debug -timeout 60 &
+#java -Dwebdriver.chrome.driver=/opt/selenium/chromedriver -jar /opt/selenium/selenium-server-standalone.jar -browserSideLog -debug -timeout 60 &
+# EDIT MARCEL remove debug
+java -Dwebdriver.chrome.driver=/opt/selenium/chromedriver -jar /opt/selenium/selenium-server-standalone.jar -browserSideLog -timeout 60 &
+
 
 echo
 echo "--- Execute command"
