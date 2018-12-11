@@ -5,21 +5,25 @@
 * openjdk:8-jdk
 * linux x64
 * Chrome (google-chrome-stable) 71.0.3578.80
-* ChromeDriver 2.44.609551
+* ChromeDriver 2.45.615279
 * Selenium 3.12.0
 * Visualtest (uiveri5) 1.35.3
 * npm 6.4.1
 * node v8.14.0
 
-# INSTALLATION
+# Download
+
+> docker pull frumania/uiveri5-base:latest
+
+# Test locally
+
+> docker run -it frumania/uiveri5-base:latest bash
+
+# Build locally
 
 > docker build --no-cache -t frumania/uiveri5-base:latest .
 
-# TEST
-
-> docker run -d frumania/uiveri5-base:latest
-
-# Usage with uiveri5
+# Usage with Uiveri5
 
 > /opt/selenium/startSeleniumServer.sh
 
@@ -34,6 +38,8 @@
 > docker run --name myslave -it frumania/uiveri5-base:latest bash
 
 > exit
+
+> docker login ...
 
 > docker commit -m "update" -a "NAME" myslave frumania/uiveri5-base:latest
 

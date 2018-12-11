@@ -146,4 +146,4 @@ RUN npm install $VISUALTEST_REPO#$VISUALTEST_VERSION -g --no-optional
 
 COPY jenkins-slave /usr/local/bin/jenkins-slave
 
-ENTRYPOINT ["jenkins-slave", "/opt/selenium/startSeleniumServer.sh"];
+ENTRYPOINT ["jenkins-slave"];
