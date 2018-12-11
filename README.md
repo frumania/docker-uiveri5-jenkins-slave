@@ -7,7 +7,7 @@
 * Chrome (google-chrome-stable) 71.0.3578.80
 * ChromeDriver 2.45.615279
 * Selenium 3.12.0
-* Visualtest (uiveri5) 1.35.3
+* **Visualtest (Uiveri5) 1.35.3**
 * npm 6.4.1
 * node v8.14.0
 

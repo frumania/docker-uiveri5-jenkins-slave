@@ -4,7 +4,6 @@ ARG CHROME_VERSION="google-chrome-stable"
 ENV CHROMEDRIVER_VERSION "$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE)"
 
 ARG NODE_VERSION="8.x"
-#ARG SELENIUM_URL="https://selenium-release.storage.googleapis.com/3.7/selenium-server-standalone-3.7.1.jar"
 ARG SELENIUM_URL="https://selenium-release.storage.googleapis.com/3.12/selenium-server-standalone-3.12.0.jar"
 # CHROMEDRIVER_URL currently not used below
 #ARG CHROMEDRIVER_URL="https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
@@ -12,7 +11,7 @@ ARG CHROMELAUNCHER_URL="https://raw.githubusercontent.com/SeleniumHQ/docker-sele
 #ARG PHANTOMJS_URL="https://bitbucket.org/ariya/phantomjs/downloads"
 ARG NODE_URL="https://deb.nodesource.com/setup_$NODE_VERSION"
 
-# TODO CHANGE OPEN SOURCE
+# TODO ADJUST AS SOON AS OPEN SOURCE
 ARG VISUALTEST_REPO="git://github.wdf.sap.corp/ui5delivery/visualtestjs.git"
 ARG VISUALTEST_VERSION="v1.35.3"
 
