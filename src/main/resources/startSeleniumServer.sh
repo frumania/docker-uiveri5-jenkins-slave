@@ -7,9 +7,10 @@ echo "--- Delete display lock"
 echo
 rm -f /tmp/.X*lock
 
-echo
-echo "--- Restart dbus"
-echo
+# echo
+# echo "--- Restart dbus"
+# echo
+# EDIT MARCEL
 # sudo /etc/init.d/dbus restart
 
 export GEOMETRY="$SCREEN_WIDTH""x""$SCREEN_HEIGHT""x""$SCREEN_DEPTH"
@@ -28,6 +29,11 @@ echo
 # EDIT MARCEL remove debug
 java -Dwebdriver.chrome.driver=/opt/selenium/chromedriver -jar /opt/selenium/selenium-server-standalone.jar -browserSideLog -timeout 60 &
 
+
+echo
+echo "--- Sleep 10s"
+echo
+exec sleep 10s
 
 echo
 echo "--- Execute command"
