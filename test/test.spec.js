@@ -21,8 +21,8 @@ describe('test', function() {
     signOut.click();
     
     console.log("Logging Out...");
-		okBtn.click();
-    browser.sleep(2000);
+		//okBtn.click();
+    //browser.sleep(2000);
     
   });
 
