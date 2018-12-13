@@ -12,9 +12,9 @@ describe('test', function() {
 
   it('Start FLP', function() {
 
-    j_username.sendKeys("info@frumania.com");
+    /*j_username.sendKeys("info@frumania.com");
     j_password.sendKeys("J#6i/{%lY+].");
-    logOnFormSubmit.click();
+    logOnFormSubmit.click();*/
 
     expect(meAreaHeaderButton.isPresent()).toBeTruthy();
     meAreaHeaderButton.click();

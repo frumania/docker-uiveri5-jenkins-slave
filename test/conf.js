@@ -67,6 +67,12 @@ exports.config = {
 		getPageTimeout : '20000',
 		allScriptsTimeout : '20000',
 		defaultTimeoutInterval : '120000'
+    },
+    auth: {
+		'sapcloud-form': {
+			user: "info@frumania.com",
+			pass: "J#6i/{%lY+]."
+		}
 	},
 	specs: 'test.spec.js',
 	reporters : [
