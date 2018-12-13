@@ -10,26 +10,33 @@
 * **Visualtest (Uiveri5) 1.35.3**
 * npm 6.4.1
 * node v8.14.0
+* jnlp (jenkins-slave)
 
-# Download
+## Download
 
 > docker pull frumania/uiveri5-base:latest
 
-# Test locally
+## Test locally
 
 > docker run -it frumania/uiveri5-base:latest bash
 
-# Build locally
+## Build locally
 
 > docker build --no-cache -t frumania/uiveri5-base:latest .
 
-# Usage with Uiveri5
+## Usage with Jenkins (Docker Plugin)
+
+[Docker Plugin for Jenkins](https://plugins.jenkins.io/docker-plugin)
+
+Connect method: Attach Docker container
+
+## Usage with Uiveri5
 
 > /opt/selenium/startSeleniumServer.sh
 
 > visualtest --seleniumAddress http://localhost:4444/wd/hub ...
 
-# Update local repository
+## Update local repository
 
 [Guide](https://www.techrepublic.com/article/how-to-create-a-docker-image-and-push-it-to-docker-hub/)
 
@@ -45,8 +52,12 @@
 
 > docker push frumania/uiveri5-base
 
-# Cleanup
+## Cleanup
 
 > docker container rm <\ContainerID\>
 
 > docker image rm <\ImageID\>
+
+## License
+
+[![Apache 2](https://img.shields.io/badge/license-Apache%202-blue.svg)](./LICENSE.txt)
