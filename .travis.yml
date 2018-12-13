@@ -13,6 +13,7 @@ services:
 
 script:
   - ls -l
+  - pwd
   - docker run --name myslave -v test:test -dit frumania/uiveri5-base:latest /bin/bash
   - docker ps
   - sleep 10
