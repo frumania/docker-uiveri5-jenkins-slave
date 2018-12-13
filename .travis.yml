@@ -12,11 +12,12 @@ services:
 #  - npm install
 
 script:
-  - docker run --name myslave -dit frumania/uiveri5-base:latest /bin/bash
+  - ls -l
+  - docker run --name myslave -v test:test -dit frumania/uiveri5-base:latest /bin/bash
   - docker ps
   - sleep 10
   - docker ps
   - docker exec -d myslave /opt/selenium/startSeleniumServer.sh
-  # Copy Test?!
+  - docker exec -d myslave cd test
   - docker exec myslave visualtest --v --seleniumAddress http://localhost:4444/wd/hub
   - docker exec myslave visualtest --v
