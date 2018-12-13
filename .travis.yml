@@ -17,4 +17,6 @@ script:
   - sleep 10
   - docker ps
   - docker exec -d myslave /opt/selenium/startSeleniumServer.sh
+  # Copy Test?!
+  - docker exec myslave visualtest --v --seleniumAddress http://localhost:4444/wd/hub
   - docker exec myslave visualtest --v
