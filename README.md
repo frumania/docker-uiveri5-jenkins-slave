@@ -2,10 +2,9 @@
 
 [![Build Status](https://travis-ci.org/frumania/docker-uiveri5-jenkins-slave.svg?branch=master)](https://travis-ci.org/frumania/docker-uiveri5-jenkins-slave)
 
-[DockerHub](https://hub.docker.com/r/frumania/uiveri5-base/)
+This image can be used for integration testing based on uiveri5 and headless chrome. It is also preconfigured to be used as Jenkins slave for SAP Fiori CI processes.
 
-
-* **Visualtest [ui5 uiveri5](https://github.com/SAP/ui5-uiveri5) 1.35.3**
+* **Visualtest / [ui5-uiveri5](https://github.com/SAP/ui5-uiveri5) 1.35.3**
 * openjdk:8-jdk
 * linux x64
 * Chrome (google-chrome-stable) 71.0.3578.80
@@ -15,6 +14,8 @@
 * node v8.14.0
 * jnlp (jenkins-slave)
 
+See also [DockerHub](https://hub.docker.com/r/frumania/uiveri5-base/)
+
 ## Usage
 
 Install/Download Docker from [docker.com](https://www.docker.com/get-started).
@@ -22,20 +23,26 @@ Install/Download Docker from [docker.com](https://www.docker.com/get-started).
 ### Run
 
 Via terminal/cmd, execute  
-> docker run -it frumania/uiveri5-base:latest bash
+> docker run --name myslave frumania/uiveri5-base:latest
 
-## Usage with Jenkins (Docker Plugin)
+## Run via Jenkins (Docker Plugin)
 
 [Docker Plugin for Jenkins](https://plugins.jenkins.io/docker-plugin)
 
 Connect method: Attach Docker container
 
-## Usage with Uiveri5
+## Test
 
-Via terminal/cmd, execute   
-> /opt/selenium/startSeleniumServer.sh
+Via terminal/cmd, execute
 
-> visualtest --seleniumAddress http://localhost:4444/wd/hub ...
+Enter container 
+> docker run -it frumania/uiveri5-base:latest bash
+
+Start Selenium Server
+> docker exec -d myslave /opt/selenium/startSeleniumServer.sh
+
+Run uiveri5 test
+> docker exec -d myslave visualtest --v --seleniumAddress http://localhost:4444/wd/hub ...
 
 ### (Optional) Build locally
 
