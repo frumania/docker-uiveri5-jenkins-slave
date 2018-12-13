@@ -12,6 +12,7 @@ ARG CHROMELAUNCHER_URL="https://raw.githubusercontent.com/SeleniumHQ/docker-sele
 ARG NODE_URL="https://deb.nodesource.com/setup_$NODE_VERSION"
 
 # TODO ADJUST AS SOON AS OPEN SOURCE
+#ARG VISUALTEST_REPO="git://github.com/SAP/ui5-uiveri5.git"
 ARG VISUALTEST_REPO="git://github.wdf.sap.corp/ui5delivery/visualtestjs.git"
 ARG VISUALTEST_VERSION="v1.35.3"
 

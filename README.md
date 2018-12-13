@@ -55,29 +55,6 @@ Via terminal/cmd, execute
 
 > docker build -t docker-uiveri5-jenkins-slave:latest .
 
-### (Optional) Update Image
-
-[Guide](https://www.techrepublic.com/article/how-to-create-a-docker-image-and-push-it-to-docker-hub/)
-
-Pull Image  
-> docker pull frumania/uiveri5-base:latest
-
-Build Image  
-> docker build --no-cache -t frumania/uiveri5-base:latest .
-
-Run initially  
-> docker run --name myslave -it frumania/uiveri5-base:latest bash
-
-> exit
-
-> docker login ...
-
-Commit  
-> docker commit -m "update" -a "NAME" myslave frumania/uiveri5-base:latest
-
-Push  
-> docker push frumania/uiveri5-base
-
 ## Useful Commands
 
 ### Start/Stop
