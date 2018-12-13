@@ -72,10 +72,10 @@ exports.config = {
 	reporters : [
 		{
 		name : './reporter/screenshotReporter',
-		screenshotsRoot: 'results/reports/'
+		screenshotsRoot: 'shared/results/reports/'
 		},{
 		name: './reporter/junitReporter',
-		reportName: 'results/reports/junitReport.xml'
+		reportName: 'shared/results/reports/junitReport.xml'
     /*prefix: 'mySuitePrefix',
 		postfix: 'mySuitePostfix'*/
 	}]
