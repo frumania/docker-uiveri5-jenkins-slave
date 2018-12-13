@@ -1,6 +1,10 @@
 # Uiveri5 Docker Slave for Jenkins
 
+[![Build Status](https://travis-ci.org/frumania/docker-uiveri5-jenkins-slave.svg?branch=master)](https://travis-ci.org/frumania/docker-uiveri5-jenkins-slave)
+
 [DockerHub](https://hub.docker.com/r/frumania/uiveri5-base/)
+
+https://github.com/SAP/ui5-uiveri5
 
 * openjdk:8-jdk
 * linux x64
