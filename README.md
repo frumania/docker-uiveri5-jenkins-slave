@@ -12,17 +12,9 @@
 * node v8.14.0
 * jnlp (jenkins-slave)
 
-## Download
-
-> docker pull frumania/uiveri5-base:latest
-
 ## Test locally
 
 > docker run -it frumania/uiveri5-base:latest bash
-
-## Build locally
-
-> docker build --no-cache -t frumania/uiveri5-base:latest .
 
 ## Usage with Jenkins (Docker Plugin)
 
@@ -37,6 +29,8 @@ Connect method: Attach Docker container
 > visualtest --seleniumAddress http://localhost:4444/wd/hub ...
 
 ## Update local repository
+
+> docker pull frumania/uiveri5-base:latest
 
 [Guide](https://www.techrepublic.com/article/how-to-create-a-docker-image-and-push-it-to-docker-hub/)
 
