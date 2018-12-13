@@ -16,6 +16,5 @@ script:
   - docker ps
   - sleep 10
   - docker ps
-  - docker exec myslave /opt/selenium/startSeleniumServer.sh
-  - sleep 10
+  - docker exec -d myslave /opt/selenium/startSeleniumServer.sh
   - docker exec myslave visualtest --v
