@@ -20,10 +20,16 @@ See also [DockerHub](https://hub.docker.com/r/frumania/uiveri5-base/)
 
 Install/Download Docker from [docker.com](https://www.docker.com/get-started).
 
-### Run
+### Run / Test
 
 Via terminal/cmd, execute  
-> docker run --name myslave frumania/uiveri5-base:latest
+> docker run --name myslave -dit frumania/uiveri5-base:latest /bin/bash
+
+Start Selenium Server
+> docker exec myslave /opt/selenium/startSeleniumServer.sh
+
+Run uiveri5 test
+> docker exec myslave visualtest --v --seleniumAddress http://localhost:4444/wd/hub ...
 
 ## Run via Jenkins (Docker Plugin)
 
@@ -32,19 +38,6 @@ Via terminal/cmd, execute
 Connect method: Attach Docker container
 
 ![docker_config](https://github.com/frumania/docker-uiveri5-jenkins-slave/blob/master/docs/img/docker_config.png)
-
-## Test
-
-Via terminal/cmd, execute
-
-Enter container 
-> docker run -it frumania/uiveri5-base:latest bash
-
-Start Selenium Server
-> docker exec -d myslave /opt/selenium/startSeleniumServer.sh
-
-Run uiveri5 test
-> docker exec -d myslave visualtest --v --seleniumAddress http://localhost:4444/wd/hub ...
 
 ### (Optional) Build locally
 
@@ -61,8 +54,8 @@ Via terminal/cmd, execute
 
 ### Start/Stop
 
-Check container status
-> docker ps
+List containers / check container status
+> docker ps -a
 
 Stop container
 > docker stop <ContainerID\>  
