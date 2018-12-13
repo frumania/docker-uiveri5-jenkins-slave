@@ -26,10 +26,10 @@ Via terminal/cmd, execute
 > docker run --name myslave -dit frumania/uiveri5-base:latest /bin/bash
 
 Start Selenium Server
-> docker exec myslave /opt/selenium/startSeleniumServer.sh
+> docker exec -d myslave /opt/selenium/startSeleniumServer.sh
 
 Run uiveri5 test
-> docker exec myslave visualtest --v --seleniumAddress http://localhost:4444/wd/hub ...
+> docker exec -d myslave visualtest --v --seleniumAddress http://localhost:4444/wd/hub ...
 
 ## Run via Jenkins (Docker Plugin)
 
