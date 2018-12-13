@@ -14,7 +14,7 @@ services:
 script:
   - ls -l
   - pwd
-  - docker run --name myslave -v test:test -dit frumania/uiveri5-base:latest /bin/bash
+  - docker run --name myslave -v /home/travis/build/frumania/docker-uiveri5-jenkins-slave:test -dit frumania/uiveri5-base:latest /bin/bash
   - docker ps
   - sleep 10
   - docker ps
