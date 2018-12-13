@@ -31,6 +31,8 @@ Via terminal/cmd, execute
 
 Connect method: Attach Docker container
 
+![docker_config](https://github.com/frumania/docker-uiveri5-jenkins-slave/blob/master/docs/img/docker_config.png)
+
 ## Test
 
 Via terminal/cmd, execute
