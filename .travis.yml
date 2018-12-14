@@ -14,12 +14,12 @@ services:
 script:
   - ls -l
   - pwd
-  - docker run --name myslave -v /home/travis/build/frumania/docker-uiveri5-jenkins-slave:/test/ -dit frumania/uiveri5-base:latest /bin/bash
+  - docker run --name myslave -v $PWD:/test/ -dit frumania/uiveri5-base:latest /bin/bash
   - docker ps
   - sleep 10
   - docker ps
   - docker exec -d myslave /opt/selenium/startSeleniumServer.sh
   - docker exec -d myslave ls
-  - docker exec -d myslave cd test
+  - docker exec -d myslave cd /test/test/
   - docker exec myslave visualtest --v --seleniumAddress http://localhost:4444/wd/hub
   - docker exec myslave visualtest --v
