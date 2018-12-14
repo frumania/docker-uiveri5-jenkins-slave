@@ -14,7 +14,7 @@ services:
 script:
   - ls -l
   - pwd
-  - docker run --name myslave -v $PWD:/test/ -dit frumania/uiveri5-base:latest /bin/bash
+  - docker run --name myslave -e user=$user -e password=$password -v $PWD:/test/ -dit frumania/uiveri5-base:latest /bin/bash
   - docker ps
   - sleep 10
   - docker ps
