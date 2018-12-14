@@ -22,14 +22,16 @@ Install/Download Docker from [docker.com](https://www.docker.com/get-started).
 
 ### Run / Test
 
-Via terminal/cmd, execute  
+Via terminal/cmd, execute
+
+Start Image/Create Container
 > docker run --name myslave -dit frumania/uiveri5-base:latest /bin/bash
 
 Start Selenium Server
 > docker exec -d myslave /opt/selenium/startSeleniumServer.sh
 
 Run uiveri5 test
-> docker exec -d myslave visualtest --v --seleniumAddress http://localhost:4444/wd/hub ...
+> docker exec myslave visualtest --v --seleniumAddress http://localhost:4444/wd/hub ...
 
 ## Run via Jenkins (Docker Plugin)
 
