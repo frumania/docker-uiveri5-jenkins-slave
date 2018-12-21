@@ -85,7 +85,13 @@ Display Logs
 > docker logs <ContainerID\>  
 
 Enter container
-> docker exec -it <ContainerID\> bash  
+> docker exec -it <ContainerID\> bash 
+
+## Support & Contribution
+
+This project is provided "as-is". There is no guarantee that raised issues will be answered or addressed in future releases.
+
+If you like to contribute, fork the code and/or let me know!
 
 ## License
 
