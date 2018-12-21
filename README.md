@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/frumania/docker-uiveri5-jenkins-slave.svg?branch=master)](https://travis-ci.org/frumania/docker-uiveri5-jenkins-slave)
 
-This image can be used for integration testing based on uiveri5 and headless chrome. It is also preconfigured to be used as Jenkins slave for SAP Fiori CI processes.
+This image can be used for integration testing based on [UIVeri5](https://github.com/SAP/ui5-uiveri5) and headless chrome. It is also preconfigured to be used as Jenkins slave for SAP Fiori CI processes.
 
 * **Visualtest / [ui5-uiveri5](https://github.com/SAP/ui5-uiveri5) 1.35.3**
 * openjdk:8-jdk
@@ -25,13 +25,19 @@ Install/Download Docker from [docker.com](https://www.docker.com/get-started).
 Via terminal/cmd, execute
 
 Start Image/Create Container
-> docker run --name myslave -dit frumania/uiveri5-base:latest /bin/bash
+```bash
+$ docker run --name myslave -dit frumania/uiveri5-base:latest /bin/bash
+```
 
 Start Selenium Server
-> docker exec -d myslave /opt/selenium/startSeleniumServer.sh
+```bash
+docker exec -d myslave /opt/selenium/startSeleniumServer.sh
+```
 
 Run uiveri5 test
-> docker exec myslave visualtest --v --seleniumAddress http://localhost:4444/wd/hub ...
+```bash
+docker exec myslave visualtest --v --seleniumAddress http://localhost:4444/wd/hub ...
+```
 
 ## Run via Jenkins (Docker Plugin)
 
@@ -45,47 +51,71 @@ Connect method: Attach Docker container
 
 Only required, if you would like to **make changes** to the image!  
 
-Via terminal/cmd, execute  
-> git clone https://github.com/frumania/docker-uiveri5-jenkins-slave.git  
+Via terminal/cmd, execute
+```bash
+git clone https://github.com/frumania/docker-uiveri5-jenkins-slave.git  
+```
 
-> cd docker-uiveri5-jenkins-slave
+```bash
+cd docker-uiveri5-jenkins-slave
+```
 
-> docker build -t docker-uiveri5-jenkins-slave:latest .
+```bash
+docker build -t docker-uiveri5-jenkins-slave:latest .
+```
 
 ## Useful Commands
 
 ### Start/Stop
 
 List containers / check container status
-> docker ps -a
+```bash
+docker ps -a
+```
 
 Stop container
-> docker stop <ContainerID\>  
+```bash
+docker stop <ContainerID\>  
+```
 
 Start container
-> docker start <ContainerID\>  
+```bash
+docker start <ContainerID\>  
+```
 
 ### Cleanup
 
 Stop container
-> docker stop <ContainerID\>  
+```bash
+docker stop <ContainerID\>  
+```
 
 Remove container
-> docker container rm <ContainerID\>  
+```bash
+$ docker container rm <ContainerID\>  
+```
 
 List images
-> docker images  
+```bash
+$ docker images  
+```
 
 Removes docker image
-> docker image rm <ImageID\>  
+```bash
+$ docker image rm <ImageID\>  
+```
 
 ### Troubleshooting
 
 Display Logs
-> docker logs <ContainerID\>  
+```bash
+$ docker logs <ContainerID\>  
+```
 
 Enter container
-> docker exec -it <ContainerID\> bash 
+```bash
+$ docker exec -it <ContainerID\> bash 
+```
 
 ## Support & Contribution
 
