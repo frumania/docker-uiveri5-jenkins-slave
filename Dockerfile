@@ -4,17 +4,12 @@ ARG CHROME_VERSION="google-chrome-stable"
 ENV CHROMEDRIVER_VERSION "$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE)"
 
 ARG NODE_VERSION="8.x"
-ARG SELENIUM_URL="https://selenium-release.storage.googleapis.com/3.12/selenium-server-standalone-3.12.0.jar"
+ARG SELENIUM_URL="https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.0.jar"
 # CHROMEDRIVER_URL currently not used below
 #ARG CHROMEDRIVER_URL="https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
 ARG CHROMELAUNCHER_URL="https://raw.githubusercontent.com/SeleniumHQ/docker-selenium/3.6.0-americium/NodeChrome/chrome_launcher.sh"
 #ARG PHANTOMJS_URL="https://bitbucket.org/ariya/phantomjs/downloads"
 ARG NODE_URL="https://deb.nodesource.com/setup_$NODE_VERSION"
-
-# TODO ADJUST AS SOON AS OPEN SOURCE
-#ARG VISUALTEST_REPO="git://github.com/SAP/ui5-uiveri5.git"
-ARG VISUALTEST_REPO="git://github.wdf.sap.corp/ui5delivery/visualtestjs.git"
-ARG VISUALTEST_VERSION="v1.35.3"
 
 USER root
 
@@ -64,7 +59,7 @@ COPY src/main/resources /opt/selenium
 
 #RUN chown -R piper:piper /opt/selenium \
 RUN chmod +x /opt/google/chrome/google-chrome \
-  && chmod +x /opt/selenium/startVisualTest.sh \
+#  && chmod +x /opt/selenium/startVisualTest.sh \
   && chmod +x /opt/selenium/startSeleniumServer.sh \
   && chmod +x /opt/selenium/start.sh \
   && chmod 755 /opt/selenium/chromedriver \
@@ -138,7 +133,7 @@ USER root
 
 RUN npm install git -g --no-optional
 RUN git config --global http.sslverify false
-RUN npm install $VISUALTEST_REPO#$VISUALTEST_VERSION -g --no-optional
+RUN npm install @ui5/uiveri5
 
 #============
 # DOCKER SLAVE

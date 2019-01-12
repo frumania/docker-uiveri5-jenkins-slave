@@ -1,1 +1,1 @@
-exec visualtest --v --config "{\"auth\": {\"sapcloud-form\": {\"user\": \"$user\",\"pass\": \"$password\"}}}"
+exec uiveri5 --v --config "{\"auth\": {\"sapcloud-form\": {\"user\": \"$user\",\"pass\": \"$password\"}}}"
