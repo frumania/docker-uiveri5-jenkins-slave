@@ -1,20 +1,20 @@
-# ui5-uiveri5 Docker Slave for Jenkins
+# SAPUI5 UIVeri5 Docker Image + Slave for Jenkins
 
 [![Build Status](https://travis-ci.org/frumania/docker-uiveri5-jenkins-slave.svg?branch=master)](https://travis-ci.org/frumania/docker-uiveri5-jenkins-slave)
 
 This image can be used for integration testing based on [UIVeri5](https://github.com/SAP/ui5-uiveri5) and headless chrome. It is also preconfigured to be used as Jenkins slave for SAP Fiori CI processes.
 
-* **[ui5-uiveri5](https://github.com/SAP/ui5-uiveri5) 1.35.3**
+* **[ui5-uiveri5](https://github.com/SAP/ui5-uiveri5) 1.35.5**
 * openjdk:8-jdk
 * linux x64
 * Chrome (google-chrome-stable) 71.0.3578.80
 * ChromeDriver 2.45.615279
 * Selenium 3.141
 * npm 6.4.1
-* node v8.14.0
+* node v8.15.0
 * jnlp (jenkins-slave)
 
-See also [DockerHub](https://hub.docker.com/r/frumania/uiveri5-base/)
+See also [DockerHub](https://hub.docker.com/r/frumania/uiveri5/)
 
 ## Usage
 
@@ -26,7 +26,7 @@ Via terminal/cmd, execute
 
 Start Image/Create Container
 ```bash
-$ docker run --name myslave -dit frumania/uiveri5-base:latest /bin/bash
+$ docker run --name myslave -dit frumania/uiveri5:latest /bin/bash
 ```
 
 Start Selenium Server
