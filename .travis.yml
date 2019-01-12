@@ -5,8 +5,8 @@ node_js:
 services:
   - docker
 
-#install:
-#  - docker run -it frumania/uiveri5-base:latest bash
+install:
+- docker build -t uiveri5:latest .
  
 #before_script:
 #  - npm install
@@ -14,7 +14,7 @@ services:
 script:
   - ls -l
   - pwd
-  - docker run --name myslave -e user=$user -e password=$password -v $PWD:/test/ -dit frumania/uiveri5:latest /bin/bash
+  - docker run --name myslave -e user=$user -e password=$password -v $PWD:/test/ -dit uiveri5:latest /bin/bash
   - docker ps
   - sleep 10
   - docker ps
