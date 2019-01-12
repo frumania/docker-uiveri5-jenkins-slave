@@ -26,7 +26,7 @@ Via terminal/cmd, execute
 
 Start Image/Create Container
 ```bash
-$ docker run --name myslave -dit frumania/uiveri5:latest /bin/bash
+$ docker run --name myslave -dit frumania/uiveri5-base:latest /bin/bash
 ```
 
 Start Selenium Server
