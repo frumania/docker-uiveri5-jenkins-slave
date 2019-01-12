@@ -133,7 +133,7 @@ USER root
 
 RUN npm install git -g --no-optional
 RUN git config --global http.sslverify false
-RUN npm install @ui5/uiveri5
+RUN npm install @ui5/uiveri5 -g --no-optional
 
 #============
 # DOCKER SLAVE
