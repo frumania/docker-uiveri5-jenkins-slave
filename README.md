@@ -7,9 +7,9 @@ This image can be used for integration testing based on [UIVeri5](https://github
 * **[ui5-uiveri5](https://github.com/SAP/ui5-uiveri5) 1.35.5**
 * openjdk:8-jdk
 * linux x64
-* Chrome (google-chrome-stable) 71.0.3578.80
+* Chrome (google-chrome-stable) 71.0.3578.98
 * ChromeDriver 2.45.615279
-* Selenium 3.141
+* Selenium 3.12
 * npm 6.4.1
 * node v8.15.0
 * jnlp (jenkins-slave)

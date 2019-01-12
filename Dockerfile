@@ -4,7 +4,7 @@ ARG CHROME_VERSION="google-chrome-stable"
 ENV CHROMEDRIVER_VERSION "$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE)"
 
 ARG NODE_VERSION="8.x"
-ARG SELENIUM_URL="https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.0.jar"
+ARG SELENIUM_URL="https://selenium-release.storage.googleapis.com/3.12/selenium-server-standalone-3.12.0.jar"
 # CHROMEDRIVER_URL currently not used below
 #ARG CHROMEDRIVER_URL="https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
 ARG CHROMELAUNCHER_URL="https://raw.githubusercontent.com/SeleniumHQ/docker-selenium/3.6.0-americium/NodeChrome/chrome_launcher.sh"
