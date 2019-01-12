@@ -14,7 +14,7 @@ This image can be used for integration testing based on [UIVeri5](https://github
 * node v8.15.0
 * jnlp (jenkins-slave)
 
-See also [DockerHub](https://hub.docker.com/r/frumania/uiveri5/)
+See also [DockerHub](https://hub.docker.com/r/frumania/uiveri5-base/)
 
 ## Usage
 
