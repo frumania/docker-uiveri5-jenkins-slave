@@ -61,7 +61,7 @@ cd docker-uiveri5-jenkins-slave
 ```
 
 ```bash
-docker build -t docker-uiveri5-jenkins-slave:latest .
+docker build -t uiveri5-base:latest .
 ```
 
 ## Useful Commands
@@ -75,24 +75,24 @@ docker ps -a
 
 Stop container
 ```bash
-docker stop <ContainerID\>  
+docker stop <ContainerID>  
 ```
 
 Start container
 ```bash
-docker start <ContainerID\>  
+docker start <ContainerID>  
 ```
 
 ### Cleanup
 
 Stop container
 ```bash
-docker stop <ContainerID\>  
+docker stop <ContainerID>  
 ```
 
 Remove container
 ```bash
-$ docker container rm <ContainerID\>  
+$ docker container rm <ContainerID>  
 ```
 
 List images
@@ -102,19 +102,19 @@ $ docker images
 
 Removes docker image
 ```bash
-$ docker image rm <ImageID\>  
+$ docker image rm <ImageID>  
 ```
 
 ### Troubleshooting
 
 Display Logs
 ```bash
-$ docker logs <ContainerID\>  
+$ docker logs <ContainerID>  
 ```
 
 Enter container
 ```bash
-$ docker exec -it <ContainerID\> bash 
+$ docker exec -it <ContainerID> bash 
 ```
 
 ## Support & Contribution
