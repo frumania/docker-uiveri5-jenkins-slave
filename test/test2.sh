@@ -1,1 +1,1 @@
-exec uiveri5 --v --config "{\"auth\": {\"sapcloud-form\": {\"user\": \"$user\",\"pass\": \"$password\"}}}"
+exec uiveri5 --v --useSeleniumJar true --config "{\"auth\": {\"sapcloud-form\": {\"user\": \"$user\",\"pass\": \"$password\"}}}"
