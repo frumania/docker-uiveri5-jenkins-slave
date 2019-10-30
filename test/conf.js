@@ -25,12 +25,12 @@ exports.config = {
 		},
 		/* disable informabrs on chrome, use headless chrome on linux/jenkins*/
 		'chrome,chromium': {
-			'linux': {
+			'linux': { //mac
 				'*': {
 					chromeOptions: {
 						'args': [
 							'disable-infobars',
-							'--headless',
+							'--headless', //disabled mac
 							'--disable-gpu'
 							// '--window-size=1400,900'
 							]/*,
@@ -55,7 +55,7 @@ exports.config = {
 	},
 	browsers: [{
 		browserName: 'chrome',
-		platformName: 'linux'
+		platformName: 'linux' //mac
 	}],
 	profile : 'integration',		
 	baseUrl : 'https://flpportal-p2000988657trial.dispatcher.hanatrial.ondemand.com/sites?siteId=5e2b911e-07f9-4d81-97c6-796d89bc1ea9',
