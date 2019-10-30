@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites platformName="mac" platformVersion="*" platformResolution="1280x1024" browser="chrome" browserVersion="*" deviceName="*" ui5_theme="belize" ui5_direction="ltr" ui5_mode="cozy">
-  <testsuite name="test" timestamp="Wed Oct 30 2019 19:36:37 GMT+0100 (GMT+01:00)" hostname="localhost" errors="0" tests="2" pending="0" disabled="0" failures="0" time="38.071">
-    <testcase classname="test" name="Authentication" time="1.945"/>
-    <testcase classname="test" name="Start FLP" time="38.069"/>
-  </testsuite>
-</testsuites>

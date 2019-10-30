@@ -58,7 +58,7 @@ exports.config = {
 		platformName: 'linux' //mac
 	}],
 	profile : 'integration',		
-	baseUrl : 'https://flpportal-p2000988657trial.dispatcher.hanatrial.ondemand.com/sites?siteId=5e2b911e-07f9-4d81-97c6-796d89bc1ea9',
+	baseUrl : 'https://flpportal-p2000988657trial.dispatcher.hanatrial.ondemand.com/sites?siteId=5e2b911e-07f9-4d81-97c6-796d89bc1ea9&sap-language=EN',
 	pageLoading: {
 		wait: '20000',
 		initialReload: false
