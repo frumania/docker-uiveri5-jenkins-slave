@@ -25,11 +25,11 @@ script:
   - cd test/shared/results/reports
   - ls
   - rm -R test/shared/results/reports
-  - cd test/shared/results/reports
+  - cd test/shared/results/
   - ls
-  - echo "run test"
+  - echo "check files"
   - docker exec -d myslave bash -c "cd /test/test && ./test2.sh"
   - sleep 60
   - cd test/shared/results/reports
   - ls
-  - echo "run test"
+  - echo "check files"
