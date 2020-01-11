@@ -23,7 +23,7 @@ script:
   - docker exec -d myslave bash -c "cd /test/test && ./test1.sh"
   - sleep 60
   - ls test/shared/results/reports
-  - rm -R test/shared/results/reports
+  - rm -f -R test/shared/results/reports
   - ls test/shared/results/
   - echo "check files"
   - docker exec -d myslave bash -c "cd /test/test && ./test2.sh"
