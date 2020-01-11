@@ -20,5 +20,8 @@ script:
   - docker ps
   - docker exec -d myslave /opt/selenium/startSeleniumServer.sh
   - sleep 10
-  - docker exec myslave bash -c "cd /test/test && ./test1.sh"
+  - docker exec -d myslave bash -c "cd /test/test && ./test1.sh"
+  - sleep 60
+  - cd test
+  - ls
   - docker exec myslave bash -c "cd /test/test && ./test2.sh"
