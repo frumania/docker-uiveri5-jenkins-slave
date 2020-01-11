@@ -22,7 +22,14 @@ script:
   - sleep 10
   - docker exec -d myslave bash -c "cd /test/test && ./test1.sh"
   - sleep 60
-  - cd test
-  - cd shared/results/reports
+  - cd test/shared/results/reports
   - ls
+  - rm -R test/shared/results/reports
+  - cd test/shared/results/reports
+  - ls
+  - echo "run test"
   - docker exec myslave bash -c "cd /test/test && ./test2.sh"
+  - sleep 60
+  - cd test/shared/results/reports
+  - ls
+  - echo "run test"
