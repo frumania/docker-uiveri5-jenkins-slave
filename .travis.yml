@@ -20,6 +20,5 @@ script:
   - docker ps
   - docker exec -d myslave /opt/selenium/startSeleniumServer.sh
   - sleep 10
-  - docker exec -ti myslave bash -c "apt-get update && exit"
   - docker exec myslave bash -c "cd /test/test && ./test1.sh"
   - docker exec myslave bash -c "cd /test/test && ./test2.sh"
