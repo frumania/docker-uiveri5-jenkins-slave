@@ -14,7 +14,7 @@ install:
 script:
   - ls -l
   - pwd
-  - docker run --name myslave -e user=$user -e password=$password -v /usr/bin/docker:/usr/bin/docker -v $PWD:/test/ -v /var/run/docker.sock:/var/run/docker.sock -dit uiveri5-base:latest /bin/bash
+  - docker run --name myslave -e user=$user -e password=$password -v $PWD:/test/ -dit uiveri5-base:latest /bin/bash
   - docker ps
   - sleep 10
   - docker ps
@@ -23,5 +23,6 @@ script:
   - docker exec -d myslave bash -c "cd /test/test && ./test1.sh"
   - sleep 60
   - cd test
+  - cd shared/results/reports
   - ls
   - docker exec myslave bash -c "cd /test/test && ./test2.sh"
