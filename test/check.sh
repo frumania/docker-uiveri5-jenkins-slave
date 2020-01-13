@@ -9,8 +9,7 @@ echo "Files with 'pass': ${iFiles}"
 
 if [ $iFiles -eq 2 ]; then
     echo "all good"
-    exit 1
 else
     echo "issue detected"
-    exit 2
+    exit 1
 fi
