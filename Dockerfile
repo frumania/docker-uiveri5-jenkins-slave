@@ -21,7 +21,7 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
   && apt-get install -qqy --no-install-recommends \
   ${CHROME_VERSION:-google-chrome-stable} \
   ca-certificates \
-  libgconf2-4 \
+  gconf2 \
   nodejs \
   sudo \
   xvfb \
