@@ -4,14 +4,14 @@
 
 This image can be used for integration testing based on [UIVeri5](https://github.com/SAP/ui5-uiveri5) and headless chrome. It is also preconfigured to be used as Jenkins slave for SAP Fiori CI processes.
 
-* **[ui5-uiveri5](https://github.com/SAP/ui5-uiveri5) v1.41.1**
+* **[ui5-uiveri5](https://github.com/SAP/ui5-uiveri5) v1.42.2**
 * openjdk:8-jdk
 * linux x64
-* Chrome (google-chrome-stable) 79.0.3945.117
-* ChromeDriver 79.0.3945.36
+* Chrome (google-chrome-stable) 80+
+* ChromeDriver 80+
 * Selenium 3.12
-* npm 6.4.1
-* node v8.15.0
+* npm 6.14.4
+* node v12.16.2
 * jnlp (jenkins-slave)
 
 See also [DockerHub](https://hub.docker.com/r/frumania/uiveri5-base/)
