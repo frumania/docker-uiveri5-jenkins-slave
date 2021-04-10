@@ -1,17 +1,16 @@
 # SAPUI5 UIVeri5 Docker Image + Slave for Jenkins
 
-[![Build Status](https://travis-ci.org/frumania/docker-uiveri5-jenkins-slave.svg?branch=master)](https://travis-ci.org/frumania/docker-uiveri5-jenkins-slave)
+[![Build Status](https://travis-ci.com/frumania/docker-uiveri5-jenkins-slave.svg?branch=master)](https://travis-ci.com/frumania/docker-uiveri5-jenkins-slave)
 
 This image can be used for integration testing based on [UIVeri5](https://github.com/SAP/ui5-uiveri5) and headless chrome. It is also preconfigured to be used as Jenkins slave for SAP Fiori CI processes.
 
-* **[ui5-uiveri5](https://github.com/SAP/ui5-uiveri5) v1.44.0**
-* openjdk:8-jdk
+* **[ui5-uiveri5](https://github.com/SAP/ui5-uiveri5) v1.46.3**
+* openjdk:11-jdk
 * linux x64
-* Chrome (google-chrome-stable) 80+
-* ChromeDriver 80+
-* Selenium 3.12
-* npm 6.14.6
-* node v12.18.3
+* Chrome (google-chrome-stable) 89.0.4389.114-1
+* ChromeDriver 89+
+* Selenium 3.141.59
+* node 14.x
 * jnlp (jenkins-slave)
 
 See also [DockerHub](https://hub.docker.com/r/frumania/uiveri5-base/)
